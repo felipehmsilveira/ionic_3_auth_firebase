@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Platform, Nav } from 'ionic-angular';
+import { Platform, Nav} from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { SigninPage } from '../pages/signin/signin';
@@ -10,7 +10,6 @@ import { HomePage } from '../pages/home/home';
 
 import { AuthService } from '../providers/auth-service/auth-service';
 
-//import { NavController } from 'ionic-angular';
 
 @Component({
   templateUrl: 'app.html'
@@ -58,7 +57,7 @@ export class MyApp {
   signOut() {
     this.authService.signOutFirebase()
       .then(() => {
-        // navCtrl
+        this.nav.setRoot(SigninPage);
       })
       .catch((error) => {
         console.error(error);
