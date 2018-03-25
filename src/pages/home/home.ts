@@ -17,14 +17,4 @@ export class HomePage {
 
   }
 
-  public signOut() {
-    this.authService.signOutFirebase()
-      .then(() => {
-        this.navCtrl.parent.parent.setRoot(SigninPage);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }
-
 }

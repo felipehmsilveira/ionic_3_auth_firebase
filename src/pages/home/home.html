@@ -1,12 +1,16 @@
 <ion-header>
   <ion-navbar>
+    <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>
-      Ionic Blank
+      Dashboard
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+
   The world is your oyster.
 
   this is one test of commit.
@@ -14,7 +18,5 @@
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
   </p>
 
-  <button ion-button block color="primary" (click)="signOut()">
-    Sair
-  </button>
+  <button (click)="signOut()">Logout</button>
 </ion-content>
